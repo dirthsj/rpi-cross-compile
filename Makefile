@@ -172,7 +172,7 @@ endif
 # Catch all rule for downloading tar.gz files from links stored in '.wget' files
 #
 %.tar.gz : %.wget
-	wget $(shell cat $?) -o $@ --show-progress
+	wget $(shell cat $?) -O $@ --show-progress
 
 #
 # Catch all rule for compiling source files
