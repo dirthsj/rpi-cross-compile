@@ -173,6 +173,7 @@ endif
 #
 %.tar.gz : %.wget
 	wget $(shell cat $?) -O $@ --show-progress
+	touch -m $@
 
 #
 # Catch all rule for compiling source files
