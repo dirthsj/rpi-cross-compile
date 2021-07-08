@@ -57,7 +57,7 @@ BOOST_LINKER_PATH = $(BOOST_INSTALL_PATH)/lib
 BOOST_INCLUDE_PATH = $(BOOST_INSTALL_PATH)/include
 BOOST_REQUIRED_LIBRARIES = --with-test # use this to include boost libraries in compilation
 
-TOOLCHAIN_DEP = $(addsuffix /.touch, $(dir $(TOOLCHAIN_BIN)) $(BOOST_INSTALL_PATH))
+TOOLCHAIN_DEP = $(addsuffix .touch, $(dir $(TOOLCHAIN_BIN))) $(addsuffix /.touch, $(BOOST_INSTALL_PATH))
 
 test: 
 	@echo $(TOOLCHAIN_DEP)
@@ -182,5 +182,5 @@ $(OUTPUT_DIR)/%.o: $(SOURCE_DIR)/%.cpp
 	@mkdir -p $(OUTPUT_DIR)
 	$(CXX) $(CXXFLAGS) -I$(BOOST_INCLUDE_PATH) -c $? -o $@
 
-/usr//.touch:
+/usr/.touch:
 # do nothing because this directory is managed by system package manager
