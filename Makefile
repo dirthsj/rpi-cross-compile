@@ -169,6 +169,12 @@ endif
 	touch $@
 
 #
+# Catch all rule for downloading tar.gz files from links stored in '.wget' files
+#
+%.tar.gz : %.wget
+	wget $(shell cat $?) -o $@ --show-progress
+
+#
 # Catch all rule for compiling source files
 #
 $(OUTPUT_DIR)/%.o: $(SOURCE_DIR)/%.cpp
