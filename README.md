@@ -1,17 +1,11 @@
 # Raspberry Pi Cross Compile
 ## What does this do?
 This is a repository that cross compiles a sample C++ program and the boost library for various versions of the pi.
-## Cloning this repository
-1. Ensure you have git lfs installed
-    * `sudo apt-get install git-lfs`
-2. Clone as you normally would
 
 ## Building for the first time
 1. Ensure you have build-essential installed
     * `sudo apt-get install build-essential`
 2. Run `make help` to see the available options
-
-⚠️If you encounter errors, ensure the `pi-sdks` directory contains 4 `.tar.gz` files. If it does not, you may have cloned the repository without `git-lfs`. Please follow [the instructions above](#cloning-this-repository) for cloning.
 
 ## How did you make this?
 ### Raspberry Pi Compilers
