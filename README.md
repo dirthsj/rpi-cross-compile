@@ -15,10 +15,10 @@ This is a repository that cross compiles a sample C++ program and the boost libr
 
 ## How did you make this?
 ### Raspberry Pi Compilers
-The `cross-gcc-10.2.0-pi_*.tar.gz` files are built by [this wonderful project](https://github.com/abhiTronix/raspberry-pi-cross-compilers) and included in this repository for convenience. If you want to swap these versions out, simply update the `PI_0_CROSS`, `PI_3_CROSS`, and/or `PI_4_CROSS` variable(s) in the Makefile.
+The `cross-gcc-10.2.0-pi_*.wget` files are download links from [this wonderful project](https://github.com/abhiTronix/raspberry-pi-cross-compilers) and included in this repository for convenience. If you want to swap these versions out, simply update the `PI_0_CROSS`, `PI_3_CROSS`, and/or `PI_4_CROSS` variable(s) in the Makefile.
 
 ### Boost Compiling
-The `boost_1_76_0.tar.gz` file is downloaded from the links provided on https://www.boost.org/. You may replace it with a different 
+The `boost_1_76_0.wget` file contains the download link provided by https://www.boost.org/. You may replace it with a different 
 version, however you will need to update the `BOOST_SOURCE` variable in the Makefile. I cannot guarantee the
 instructions in the Makefile will work for every version of boost. If your version fails to compile for some reason,
 modify the `$(BOOST_SOURCE)/b2` and `$(BOOST_INSTALL_PATH)/.touch` targets to match the instructions from the boost organization for said version.
