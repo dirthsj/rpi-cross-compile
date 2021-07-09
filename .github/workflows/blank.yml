@@ -39,3 +39,9 @@ jobs:
         
       - name: Make for pi4
         run: make pi4
+
+      - name: GH Release
+        uses: softprops/action-gh-release@v0.1.5
+        with:
+          # Newline-delimited list of path globs for asset files to upload
+          files: desktop,pi0,pi3,pi4
